@@ -1,0 +1,19 @@
+.title {
+  font-size: 20px;
+  color: rgb(90, 89, 87);
+}
+
+.statList {
+  display: block;
+  width: 210px;
+  height: 30px;
+  border-radius: 20px;
+  padding: 5px;
+  background-color: #eee;
+  font-size: 18px;
+  text-transform: capitalize;
+  text-align: center;
+  line-height: 1.67;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
