@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
 import Statistics from 'components/Statistics/Statistics';
 import { Notification } from 'components/Notification/Notification';
 import FeedbackOptions from 'components/FeedbackOptions/FeedbackOptions';
@@ -60,13 +59,3 @@ class App extends Component {
 }
 
 export default App;
-
-// App.propTypes = {
-//   title: PropTypes.string.isRequired,
-//   // options: PropTypes.arrayOf({
-//   //   key: PropTypes.string.isRequired,
-//   //   type: PropTypes.string.isRequired,
-//   //   name: PropTypes.string.isRequired,
-//   // }).isRequired,
-//   onLeaveFeedback: PropTypes.func,
-// };

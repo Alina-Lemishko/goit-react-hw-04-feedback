@@ -1,32 +1,19 @@
 import React from 'react';
-import shortid from 'shortid';
+import PropTypes from 'prop-types';
 import s from './Statistics.module.css';
 
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
-  const goodKey = shortid.generate();
-  const badKey = shortid.generate();
-  const neutralKey = shortid.generate();
-  const totalKey = shortid.generate();
-  const feedbackKey = shortid.generate();
   return (
     <>
       {' '}
       <h2 className={s.title}>Statistics</h2>
       <ul>
-        <li className={s.statList} key={goodKey}>
-          Good: {good}
-        </li>
-        <li className={s.statList} key={neutralKey}>
-          Neutral: {neutral}
-        </li>
-        <li className={s.statList} key={badKey}>
-          Bad: {bad}
-        </li>
-        <li className={s.statList} key={totalKey}>
-          Total: {total}
-        </li>
+        <li className={s.statList}>Good: {good}</li>
+        <li className={s.statList}>Neutral: {neutral}</li>
+        <li className={s.statList}>Bad: {bad}</li>
+        <li className={s.statList}>Total: {total}</li>
 
-        <li className={s.statList} key={feedbackKey}>
+        <li className={s.statList}>
           Positive feedback: {good > 0 ? positivePercentage + `%` : 0 + `%`}
         </li>
       </ul>
@@ -35,3 +22,11 @@ const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
 };
 
 export default Statistics;
+
+Statistics.propTypes = {
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired,
+  positivePercentage: PropTypes.number.isRequired,
+};
