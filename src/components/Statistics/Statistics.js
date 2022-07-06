@@ -5,7 +5,6 @@ import s from './Statistics.module.css';
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
   return (
     <>
-      {' '}
       <h2 className={s.title}>Statistics</h2>
       <ul>
         <li className={s.statList}>Good: {good}</li>
